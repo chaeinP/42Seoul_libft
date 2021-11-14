@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:21:12 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/10 14:47:33 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:19:19 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	i = dst_len;
 	j = 0;
-	if (dst_len > dstsize)
+	if (dst_len >= dstsize)
 		return (src_len + dstsize);
 	if (j + dst_len + 1 < dstsize)
 	{

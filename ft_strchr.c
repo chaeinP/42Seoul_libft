@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 01:23:28 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/10 12:39:59 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 04:22:21 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-	char	*sc;
+	char	uc;
 
 	i = 0;
-	sc = (char *)s;
-	while (sc[i])
+	uc = (char)c;
+	while (s[i])
 	{
-		if (sc[i] == c)
-			return (&sc[i]);
+		if (s[i] == c)
+			return ((char *)s + i);
 		i++;
 	}
-	if (sc[i] == c)
-		return (&sc[i]);
+	if (s[i] == c)
+		return ((char *)s + i);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 01:46:40 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/11 03:17:22 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 04:33:39 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ char	*ft_itoa(int n)
 		str[--i] = nbr % 10 + 48;
 		nbr /= 10;
 	}
-	return (str);
+	return ((char *)str);
 }

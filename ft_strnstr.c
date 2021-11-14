@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 02:05:19 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/10 14:57:25 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 02:13:02 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,20 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	size_t	needle_len;
+	char	*hay;
 
 	i = 0;
 	needle_len = ft_strlen(needle);
-	if (!*needle)
-		return ((char *)haystack);
-	while (haystack[i] && i < len)
+	hay = (char *)haystack;
+	if (!needle_len)
+		return (hay);
+	while (hay[i] && len >= needle_len)
 	{
-		j = 0;
-		if (haystack[i] == needle[j])
-		{
-			while (needle[j] && haystack[i + j] == needle[j] && i + j < len)
-				j++;
-			if (j == needle_len)
-				return ((char *)&haystack[i]);
-		}
+		if (!ft_memcmp(&hay[i], needle, needle_len))
+			return ((char *)&hay[i]);
 		i++;
+		len--;
 	}
 	return (0);
 }

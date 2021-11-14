@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 20:23:43 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/10 21:08:01 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 02:45:23 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	str_size;
 	char	*str;
 
-	if (!s1 || !s2)
-		return (0);
 	str_size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = (char *)malloc(sizeof(char) * (str_size));
 	if (!str)
