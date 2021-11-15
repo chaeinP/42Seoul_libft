@@ -6,7 +6,7 @@
 #    By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 23:40:54 by chaepark          #+#    #+#              #
-#    Updated: 2021/11/11 18:09:20 by chaepark         ###   ########.fr        #
+#    Updated: 2021/11/16 00:06:39 by chaepark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ NAME = libft.a
 ifdef WITH_BONUS
 	OBJECTS = $(OBJS) $(BO_OBJS)
 else
-	OBJECTS = $(OBJS) $(BO_OBJS)
+	OBJECTS = $(OBJS)
 endif
 
 .c.o:
@@ -47,12 +47,13 @@ endif
 $(NAME):	$(OBJECTS)
 					ar rcs $(NAME) $(OBJECTS)
 
-bonus:	WITH_BONUS=1 ${all}
+bonus:
+					make WITH_BONUS=1 ${all}
 
 all:	$(NAME)
 
 clean:
-					rm -f ${OBJECTS}
+					rm -f ${OBJS} ${BO_OBJS}
 
 fclean:	clean
 					rm -f ${NAME}

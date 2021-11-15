@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 01:16:30 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/15 04:07:41 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 20:17:36 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i++], 1);
-	}
+	write(fd, s, ft_strlen(s));
 }

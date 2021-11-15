@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 14:14:12 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/11 15:17:03 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:32:50 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst)
 		return (lst);
 	last = lst;
-	while (last -> next)
+	while (last->next)
 		last = last->next;
 	return (last);
 }

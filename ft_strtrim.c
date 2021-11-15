@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:09:35 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/15 04:32:00 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 20:02:40 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*find_start_s1(char const *s1, char const *set)
 	start = (char *)s1;
 	while (start[i] && check_in_set(start[i], set))
 		i++;
-	return (&start[i]);
+	return (start + i);
 }
 
 static char	*find_end_s1(char *start, char const *s1, char const *set)

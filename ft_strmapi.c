@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 11:19:37 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/15 04:07:14 by chaepark         ###   ########.fr       */
+/*   Updated: 2021/11/15 20:08:26 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-	return ((char *)str);
+	return (str);
 }
