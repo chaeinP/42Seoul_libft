@@ -6,12 +6,11 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:09:35 by chaepark          #+#    #+#             */
-/*   Updated: 2021/11/15 20:02:40 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/01/17 11:24:36 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	check_in_set(char c, char const *set)
 {
